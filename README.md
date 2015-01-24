@@ -1,2 +1,2 @@
 # myvim
-vim setup with vimrc
+my favorite plugin and .vimrc configuration
