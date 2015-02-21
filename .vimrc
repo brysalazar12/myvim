@@ -85,4 +85,4 @@ nmap ,t :FufTaggedFile<CR>
 " Bclose
 nnoremap <Leader>q :Bclose<CR>
 
-echo "(>^.^<)"
+"echo "(>^.^<)"
