@@ -29,7 +29,11 @@ inoremap <C-u> <esc>vb <left><S-u> wa
 " upper case current word in visual mode
 nnoremap <C-u> vbw <S-u>
 " save using Ctrl + s in insert mode
-nnoremap <c-s> :w<CR>
+nnoremap <Leader>s :w<CR>
+" edit .vimrc
+"nnoremap <Leader>ev :vsplit $MYVIMRC<CR>
+nnoremap <silent> <Leader>ev :vsplit ~/.vim/.vimrc<CR>
+nnoremap <silent> <Leader>es :so $MYVIMRC<CR>
 
 " pathogen.vim for easy managing of plugin
 " execute pathogen#infect()
@@ -50,11 +54,17 @@ autocmd vimenter * NERDTree " Open NERDTree if we're simply launching vim
 
 " buffers
 " Ctrl Left & Right move betwwen buffers
-noremap <silent> <C-left> :bprev<CR>
 noremap <silent> <C-h> :bprev<CR>
-noremap <silent> <C-right> :bnext<CR>
 noremap <silent> <C-l> :bnext<CR>
-noremap <silent> <C-h> :bprev<CR>
+nnoremap <Leader>l <C-w>l
+nnoremap <Leader>h <C-w>h
+nnoremap <Leader>j <C-w>j
+nnoremap <Leader>k <C-w>k
+"resize window of current buffer
+nnoremap <C-RIGHT> :vertical resize +2<CR>
+nnoremap <C-LEFT> :vertical resize -2<CR>
+nnoremap <C-DOWN> resize -2<CR>
+nnoremap <C-UP> resize +2<CR>
 
 " snipmate to recognize php as html
 au BufRead *.php set ft=php.html
@@ -71,5 +81,8 @@ set hidden
 nmap ,f :FufFileWithCurrentBufferDir<CR>
 nmap ,b :FufBuffer<CR>
 nmap ,t :FufTaggedFile<CR>
+
+" Bclose
+nnoremap <Leader>q :Bclose<CR>
 
 echo "(>^.^<)"
