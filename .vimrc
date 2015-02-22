@@ -34,6 +34,8 @@ nnoremap <Leader>s :w<CR>
 "nnoremap <Leader>ev :vsplit $MYVIMRC<CR>
 nnoremap <silent> <Leader>ev :vsplit ~/.vim/.vimrc<CR>
 nnoremap <silent> <Leader>es :so $MYVIMRC<CR>
+" saves time map spacebar to colon
+nnoremap <space> :
 
 " pathogen.vim for easy managing of plugin
 " execute pathogen#infect()
@@ -84,5 +86,9 @@ nmap ,t :FufTaggedFile<CR>
 
 " Bclose
 nnoremap <Leader>q :Bclose<CR>
+
+" tcomment
+map <Leader>c <C-_><C-_>
+
 
 "echo "(>^.^<)"
